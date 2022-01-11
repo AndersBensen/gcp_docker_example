@@ -20,6 +20,8 @@ if __name__ == '__main__':
     # Learn the digits on the train subset
     clf.fit(X_train, y_train)
 
+    tmp = "this does nothing"
+    print(tmp)
     # Predict the value of the digit on the test subset
     predicted = clf.predict(X_test)
 
