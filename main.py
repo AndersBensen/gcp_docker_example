@@ -10,7 +10,7 @@ if __name__ == '__main__':
     data = digits.images.reshape((n_samples, -1))
 
     # Create a classifier: a support vector classifier
-    clf = svm.SVC(gamma=0.002)
+    clf = svm.SVC(gamma=0.001)
 
     # Split data into 50% train and 50% test subsets
     X_train, X_test, y_train, y_test = train_test_split(
@@ -20,8 +20,6 @@ if __name__ == '__main__':
     # Learn the digits on the train subset
     clf.fit(X_train, y_train)
 
-    tmp = "this does nothing"
-    print(tmp)
     # Predict the value of the digit on the test subset
     predicted = clf.predict(X_test)
 
